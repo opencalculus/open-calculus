@@ -11,6 +11,7 @@
 \usepackage{anysize}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{bigstrut}
 
 \marginsize{0.5in}{0.5in}{0.5in}{0.5in}
 
@@ -87,16 +88,64 @@ We gave the formal definition of a function as having only one \textit{domain} v
 Let's find out of the equation $x^2 + y^2 = 4$ is a valid function. 
 
 \begin{center}
-\includegraphics[width=2.5in, height=2.5in]{img/vert_line_test.eps}
-
-\small \textit{Generated with Maple 16} \\
+\includegraphics[width=2.5in, height=2.5in]{img/vert_line_test.eps} \\
 \end{center}
 
 We can see clearly that the vertical line $x=1$ intersects our equation $x^2 + y^2 = 4$ (a circle) at two $y$-values. By the vertical line test, our equation is \textbf{not} a function.
 
-\subsubsection{Manipulation}
+\subsubsection{Composition and Transformation}
+Functions can be manipulated just like variables using addition, subtraction, multiplication, and division. For example, given $f(x) = x^2 + 4$ and $g(x) = 3x^2 - 10$, $f - g = x^2 + 4 - (3x^2 - 10) = 14 - 2x^2$. \\
+
+Another way to combine functions is using the composition of two (or more) functions. Composition is usually denoted by $h(x) = f \circ g = (f \circ g)(x) = f(g(x))$. \textbf{N.B.} Composition of functions is not commutative! \\
+
+\textbf{Example:} Given $f(x) = x^3 + 5x + 2$ and $g(x) = x + 1$, find $(f \circ g)(x)$ and $(g \circ f)(x)$.
+\begin{align*}
+	(f \circ g)(x) & = f(g(x)) = (x+1)^3 + 5(x+1) + 2 \\
+	(g \circ f)(x) & = g(f(x)) = (x^3 + 5x + 2) + 1 \\
+\end{align*}
+
+\textit{Transformations coming soon}
+
 \subsubsection{Domain and Range}
+A function's \textbf{domain} is the set of all $x$-values over which it is defined. For example, the domain of $\sqrt{x}$ is $[0,\infty)$ because $\sqrt{x}$ is not defined for $x$-values less than 0.
+
+\begin{center}
+\includegraphics[width=2.5in, height=2.5in]{img/sqrtx_domain.eps} \\
+\end{center}
+
+A function's \textbf{range} is the set of all $y$-values that it attains. For example, the range of $-x^2$ is $(-\infty,0]$ because $-x^2$ is not defined for positive $y$-values. 
+
+\begin{center}
+\includegraphics[width=2.5in, height=2.5in]{img/x2_range.eps} \\
+\end{center}
+
 \subsubsection{Trigonometry}
+Having a solid understanding of the main trigonometric functions along with their inverses and identities will be extremely helpful throughout your study of calculus. Here we will quickly review each of these functions. \\
+
+\begin{center}
+\includegraphics[width=2.5in, height=2.5in]{img/sinx.eps}
+\includegraphics[width=2.5in, height=2.5in]{img/cosx.eps} \\
+$\sin{x}$ on $[-2\pi,2\pi]$ and $\cos{x}$ on $[-2\pi,2\pi]$ \\
+
+\includegraphics[width=2.5in, height=2.5in]{img/tanx.eps}
+\includegraphics[width=2.5in, height=2.5in]{img/cotx.eps} \\
+$\tan{x}$ on $[-2\pi,2\pi]$ and $\cot{x}$ on $[-2\pi,2\pi]$ \\
+
+\includegraphics[width=2.5in, height=2.5in]{img/cscx.eps}
+\includegraphics[width=2.5in, height=2.5in]{img/secx.eps} \\
+$\csc{x}$ on $[-2\pi,2\pi]$ and $\sec{x}$ on $[-2\pi,2\pi]$ \\
+\end{center}
+
+\textbf{Identities to Know:}
+\begin{center}
+	\begin{tabular}{ | l | l | l | p{5cm} |}
+		\hline
+		$ \sin^2{x} + \cos^2{x}=1 $ & $ \tan^2{x} + 1 = \sec^2{x} $ & $ \cot^2{x} + 1 = \csc^2{x} $ \bigstrut \\ \hline
+		$ \sin^2{\theta} = \frac{1}{2}(1 - \cos{2\theta}) $ & $ \cos^2{\theta} = \frac{1}{2}(1 + \cos{2\theta}) $ & $\tan^2{\theta} = \frac{1 - \cos{2\theta}}{1 + \cos{2\theta}}$ \bigstrut \\
+		\hline
+	\end{tabular} \\
+\end{center}
+
 \subsubsection{Exercises}
 
 \section{Limits}
