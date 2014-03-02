@@ -10,10 +10,11 @@
 \usepackage{amsmath}
 \usepackage{anysize}
 \usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{bigstrut}
+\usepackage{framed}
 
+\setlength{\parindent}{0cm}
 \marginsize{0.5in}{0.5in}{0.5in}{0.5in}
+\everymath{\displaystyle}
 
 \linespread{1.1}
 
@@ -37,7 +38,7 @@
 Dixon \textsc{Crews}\\[0.5cm]
 \small \texttt{\href{mailto:dixon@opencalculus.org}{dixon@opencalculus.org}} \\ [3.5cm]
 
-{\large Version 1.01}\\[1cm]
+{\large Version 1.02}\\[1cm]
 {\large March 2014}\\[3cm]
 
 \vfill 
@@ -62,6 +63,48 @@ This text is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa
 \textbf{Calculus} is a branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series. It has two major branches, differential calculus and integral calculus, which are related to the fundamental theorem of calculus. Calculus has widespread applications in science, economics, and engineering and can solve many problems for which algebra alone is insufficient. \footnote{\url{http://en.wikipedia.org/wiki/Calculus}}
 
 \section{Limits}
+
+\subsection{Introduction}
+\textbf{Definition:} The limit of $f(x)$ as $x$ approaches $a$ equals $L$
+\begin{align*}
+	\lim_{x \to a} f(x) = L
+\end{align*}
+
+if we can make the values of $f(x)$ as close to $L$ as we like by taking $x$ to be close to $a$ but not equal to $a$. It is important to note that we do not consider the case where $x = a$ when evaluating limits. $f(x)$ may not be defined at $x = a$, so we are just concerned with the behavior of $f(x)$ as it approaches $x = a$. \\
+
+\subsubsection{Numerical Limit Evaluation}
+We can numerically evaluate limits by creating a table of values and letting the independent variable (usually $x$ or $t$) get very close to our $a$ value. Let's look at an example. \\
+
+\textbf{Evaluate} $\lim_{x \to 2} \sqrt{x}$ given \hspace{1em} 
+\begin{tabular}{c | c}
+	$x$ & $\sqrt{x}$  \\ \hline
+	1.98 & 1.4071 \\
+	1.99 & 1.4107 \\
+	2.00 & ?      \\
+	2.01 & 1.4177 \\
+	2.02 & 1.4213 \\
+\end{tabular}
+
+Let's choose 1.414 as our limit. $\sqrt{2}$ to four decimal places is actually 1.4142, so this is quite a good approximation!
+
+\subsection{One-Sided Limits}
+We can also look at limits from both directions. If we're evaluating a limit and see that we approach a different value from the left than we do when approaching from the right, the limit \textbf{does not exist (DNE)}. \\
+
+A left-sided limit is denoted by changing $a$ to $a^-$: $\lim_{x \to a^-} f(x) = L$ \\
+
+Similarly, a right-sided limit is denoted by changing $a$ to $a^+$: $\lim_{x \to a^+} f(x) = L$ \\
+
+\begin{center}
+	\begin{framed}
+	$\lim_{x \to a} f(x) = L$ \textbf{iff} $\lim_{x \to a^-} f(x) = L$ \textbf{and} $\lim_{x \to a^+} f(x) = L$
+	\end{framed}
+\end{center}
+
+\subsection{Properties of Limits}
+
+\subsection{Continuity}
+
+\subsection{Infinite Limits}
 
 \section{Differentiation}
 
